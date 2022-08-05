@@ -1,8 +1,13 @@
 <div class="container">
   <h1>My tasks</h1>
-  <ul>
+  <ul class="ps-1 py-3">
     <% @tasks.each do |task| %>
       <li>
+        <% if task.completed %>
+          <i class="fa-regular fa-square-check"></i>
+        <% else %>
+          <i class="fa-regular fa-square"></i>
+        <% end %>
         <%= link_to task.title, task_path(task) %>
         •
         <%= link_to task_path(task), data: {method: :delete, confirm: "Are you sure?"} do %>
@@ -11,7 +16,8 @@
       </li>
     <% end %>
   </ul>
-  <div>
+  <hr/>
+  <div class="pt-3">
   <%= link_to "+ Add a new task", new_task_path %>
   </div>
 </div>

@@ -1,8 +1,6 @@
 <div class="container">
   <h1>Edit task</h1>
   <%=  render "form", task: @task %>
-  <div>
-    <%= link_to "Back to task", task_path(@task) %>
-    <%# <%= link_to "Back to list", tasks_path %>
-  </div>
+  <hr/>
+  <%= render "back_to_list" %>
 </div>

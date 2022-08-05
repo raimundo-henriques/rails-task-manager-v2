@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(76, 121, 255);
+}
+
+.edit-button {
+  color: gray;
+}
